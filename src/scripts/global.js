@@ -38,3 +38,22 @@ var renderAsideMenu = function(elementSelector, data) {
     });
 
 }
+
+var responsiveButtonMenu = function() {
+
+    var btnOpen = document.querySelector('#responsiveButton');
+    var aside = document.querySelector('#aside');
+
+    btnOpen.addEventListener('click', function(){
+
+        aside.className ='filters filter-close';
+
+
+    } ,false);
+
+    var btnClose = document.querySelector('#close-menu');
+    btnClose.addEventListener('click', function(){
+        aside.className ='filters';
+    }, false);
+
+}

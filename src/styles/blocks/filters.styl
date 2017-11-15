@@ -1,26 +1,57 @@
+.float-option
+    width: 100%
+    padding: 1rem 0px;
+    @media(min-width: 640px)
+        display: none
+
 .filters
-    box-sizing: border-box;
-    padding: 0.25rem;
-    width: 25%;
+    box-sizing: border-box
+    padding: 0.25rem
+    width: 80vw
+    height: 100vh
+    position:fixed
+    background: $color-text-contrast
+    box-shadow: .05em .2em .6em rgba(0,0,0,.2)
+    
+    transition: $transition
+    transform: translate(-110%);
 
-    .filter
-        h2
-            margin 0px;
+    top:0
+    overflow: auto
+    @media(min-width: 640px)
+        width: 25%
+        height: auto
+        position: relative
+        box-shadow: none
+        background-color: transparent
+        transform: translate(0%);
 
-        ul 
-            list-style: none
-            margin: 0px
-            padding: 1em
+.filter-close
+    transform: translate(-1.5%);
+    @media(min-width: 640px)
+        transform: translate(0px);
 
-            li a
-                color: $color-primary
-                width: 100%
-                display: inline-block
-                transition: $transition
-                padding: $half-padding
+.filter
+    h2
+        margin 0px;
 
-                &:hover,
-                &:active,
-                &:focus
-                    color: $color-text-contrast
-                    background-color: $color-primary
+    ul 
+        list-style: none
+        margin: 0px
+        padding: 1em
+
+        li a
+            color: $color-primary
+            width: 100%
+            display: inline-block
+            transition: $transition
+            padding: $half-padding
+            box-sizing: border-box
+
+            &:hover,
+            &:active,
+            &:focus
+                color: $color-text-contrast
+                background-color: $color-primary
+
+

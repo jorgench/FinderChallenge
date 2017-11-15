@@ -15,9 +15,10 @@ html(lang="es")
                 .page-logo
                     h1.logo Finder challenge
                 nav.navigation
+                    button#responsiveButton.button.primary-button menu
                     include blocks/search-form
             main.content-body
-                aside.filters
+                aside#aside.filters
                     include blocks/aside
                 content.grid
                     ul#gridContent
