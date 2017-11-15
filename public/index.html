@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Finder challenge</title>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Proxima+Nova" rel="stylesheet" type="text/css">
+    <link href="/vendor/normalize-css/normalize.css" rel="stylesheet">
+    <link href="/vendor/awesomplete/awesomplete.css" rel="stylesheet">
+    <link href="/styles/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app">
+      <header class="content-head">
+        <div class="page-logo">
+          <h1 class="logo">Finder challenge</h1>
+        </div>
+        <nav class="navigation">
+          <button class="button primary-button" id="responsiveButton">menu</button>
+          <div class="search-form">
+            <input class="form-input">
+            <button class="button primary-button" id="searchButon" type="submit">Buscar</button><a class="button invert-button" href="#">Guardar Busqueda</a>
+          </div>
+        </nav>
+      </header>
+      <main class="content-body">
+        <aside class="filters" id="aside">
+          <div class="float-option">
+            <button class="button primary-button" id="close-menu">Cerrar</button>
+          </div>
+          <div class="filter">
+            <h2>Búsquedas Guardas</h2>
+            <ul id="searchHistory"></ul>
+          </div>
+          <div class="filter">
+            <h2>Cartegorías</h2>
+            <ul id="listCategories">
+              <li><a href="#">Todos</a></li>
+              <li><a href="#">Terror</a></li>
+              <li><a href="#">Comedia</a></li>
+              <li><a href="#">Drama</a></li>
+            </ul>
+          </div>
+          <div class="filter">
+            <h2>Idioma</h2>
+            <ul id="listLang"> 
+              <li><a href="#">Todos</a></li>
+              <li><a href="#">Inglés</a></li>
+              <li><a href="#">Español</a></li>
+              <li><a href="#">Portugués</a></li>
+            </ul>
+          </div>
+          <div class="filter">
+            <h2>Publicación</h2>
+            <ul>
+              <li><a href="#">Todos</a></li>
+              <li><a href="#">Hoy</a></li>
+              <li><a href="#">Hace una semana</a></li>
+              <li><a href="#">Hace un mes</a></li>
+              <li><a href="#">Hace un año</a></li>
+            </ul>
+          </div>
+          <div class="filter">
+            <h2>Presentación</h2>
+            <ul id="listEdition">
+              <li><a href="#">Impreso</a></li>
+              <li><a href="#">Digital</a></li>
+              <li><a href="#">Impreso y Digital</a></li>
+            </ul>
+          </div>
+        </aside>
+        <content class="grid">
+          <ul id="gridContent"></ul>
+        </content>
+      </main>
+      <footer>
+        <div class="footer-content">
+          <button class="button invert-button" id="afterContent">Anterior</button>
+          <button class="button invert-button" id="beforeContent">Siguiente</button>
+        </div>
+      </footer>
+    </div>
+    <script src="/vendor/underscore/underscore-min.js"></script>
+    <script src="/vendor/awesomplete/awesomplete.min.js"></script>
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/search-form.js"></script>
+    <script src="/scripts/grid.js"></script>
+    <script src="/scripts/app.js"></script>
+  </body>
+</html>
