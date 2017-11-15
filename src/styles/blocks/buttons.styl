@@ -1,0 +1,53 @@
+.button
+    font-size: 1rem
+    outline: none
+    padding: $half-padding
+    cursor: pointer
+    transition: $transition
+    box-sizing: border-box
+    border: 1px solid currentColor
+    line-height: 1.15
+    border-radius: $border-radius
+    margin: 0px 0.25em
+    display: inline-block
+    &:focus,
+    &:active,
+    &:hover
+        box-shadow: none
+        outline: none !important
+        moz-outline-style: none !important
+    :first-child
+        margin-left: 0px
+    :last-child
+        margin-right: 0px
+
+    &:disabled
+        opacity: .35;
+
+.primary-button
+    background-color: $color-primary
+    color: $color-text-contrast
+    border-color: $color-primary
+    &:focus,&:hover
+        background-color: darken($color-primary,5)
+    &:active
+        background-color: darken($color-primary,15)
+    &:target
+        background-color: $color-primary
+    &:disable
+        cursor: default
+        user-select:none
+        &:active,&:focus,&:hover
+            background-color: $color-primary
+            user-select:none
+
+.invert-button
+    text-decoration: none
+    color: $color-primary
+    background-color: $color-text-contrast
+
+    &:focus,&:active,&:hover
+        text-decoration: underline
+    &:disable
+        user-select:none
+        opacity: 0.5

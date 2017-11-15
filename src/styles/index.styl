@@ -1,4 +1,57 @@
+$complete-padding= 1em 1.618em
+$half-padding= 0.5em 0.809em
+
+$padding-global = 0.5rem
+
+$border-radius= 0.25em
+
+$color-primary= #12B1AE
+$color-secundary= #F2EB61
+$color-text-contrast= #FCFCF8
+$color-text = #2B2A23
+
+$transition= all 0.3s ease-out
+
 *
     font-family "Proxima Nova"
+    color: $color-text
+
+body
+    background-color: $color-text-contrast
+
+::-moz-selection
+    background: $color-secundary
+    color: $color-text
+::selection
+    background: $color-secundary
+    color: $color-text
+
+
+.awesomplete mark
+    background-color: $color-text-contrast
+    color: $color-primary
+
+.awesomplete > ul > li
+    transition: $transition
+
+.awesomplete > ul > li:hover
+    background-color: $color-primary
+    color: $color-text-contrast
+
+.awesomplete li:hover mark
+    background: $color-secundary
+    color: $color-text
 
 @import "blocks/*"
+
+h3
+    font-size: 1.17em
+
+
+@keyframes entryElement 
+    
+    0%
+        opacity: 0;
+    
+    100%
+        opacity: 1;

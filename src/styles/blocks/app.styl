@@ -1,3 +1,32 @@
 .app
     max-width 960px
     margin 0 auto
+
+.content-head
+    display: flex
+    flex-wrap: wrap;
+    align-items: baseline
+    justify-content: center
+    padding: 0.809em $padding-global
+
+
+    .page-logo
+
+        background: $color-primary
+        /*background-clip: text;
+        -webkit-background-clip: text;*/
+
+        .logo
+            font-size: 2.5rem
+            text-transform: uppercase
+            margin: 0px
+            color: $color-text-contrast
+            padding: .5rem .809rem
+
+    @media(min-width: 877px)
+        align-items: baseline
+        justify-content: space-between
+
+.content-body
+    display: flex
+    padding: 0.809em $padding-global

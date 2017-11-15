@@ -1,0 +1,34 @@
+.grid
+    flex-grow: 1
+    
+#gridContent
+    margin: 0 -0.5rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    .grid-item
+        background-color: $color-text-contrast
+        box-sizing: border-box
+        display: flex
+        flex-direction: column
+        width: 100%
+        padding: 0.5rem
+        /*animation: entryElement 1s .75s ease;*/
+
+        .item-content
+            padding: $half-padding
+            display: flex
+            box-shadow: .05em .2em .6em rgba(0,0,0,.2)
+            border-radius: $border-radius
+            flex-direction: column
+            flex-grow: 1;
+            align-items: center;
+
+        @media(min-width: 640px)
+            width:50%
+
+        @media(min-width: 900px)
+            width:33.33%

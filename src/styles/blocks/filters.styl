@@ -1,0 +1,26 @@
+.filters
+    box-sizing: border-box;
+    padding: 0.25rem;
+    width: 25%;
+
+    .filter
+        h2
+            margin 0px;
+
+        ul 
+            list-style: none
+            margin: 0px
+            padding: 1em
+
+            li a
+                color: $color-primary
+                width: 100%
+                display: inline-block
+                transition: $transition
+                padding: $half-padding
+
+                &:hover,
+                &:active,
+                &:focus
+                    color: $color-text-contrast
+                    background-color: $color-primary

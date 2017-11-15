@@ -1,9 +1,52 @@
 .search-form
     margin-top 30px
+    display: flex;
+    flex-wrap: wrap
+
+    .awesomplete
+        width: 100%;
+        @media(min-width: 877px)
+            width: auto
+        input
+            width: 100%;
+            @media(min-width: 877px)
+                width:auto
+
+    .button
+        margin-top: 0.809em
+        flex-grow: 1
+        text-align: center
+        @media(min-width: 877px)
+            margin-top: 0px
+            text-align: left
+
+
+    .button:last-child
+        margin-right: 0px
+    .button:first-child
+        margin-left: 0px
+
+    @media(min-width: 877px)
+        display: block
+        margin-top: 0px
+
+
+
+.form-input
+    padding: $half-padding
+    box-shadow: .05em .2em .6em rgba(0,0,0,.2)
+    border-radius: $border-radius
+    box-sizing: border-box
+    border: 1px solid rgba(0, 0, 0, 0.3)
+
+    &:focus
+        outline: none
+        border-color: $color-primary
+
 
 /*
     for responsive
-*/
 .search-form
     +below(650px)
         display none
+*/

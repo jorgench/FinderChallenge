@@ -2,7 +2,7 @@
   constants and global functions
 */
 
-var JSON_FILE = '/books_schema.json';
+var JSON_FILE = '/books-schema.json';
 
 /*
  @method loadJSON
@@ -20,3 +20,21 @@ var loadJSON = function(url, callback){
     };
     xobj.send(null);
 };
+
+var renderAsideMenu = function(elementSelector, data) { 
+    
+    var elementParent = document.querySelector(elementSelector);
+    elementParent.innerHTML = '';
+
+    var allOption = document.createElement('li');
+    allOption.innerHTML = '<a href="#">Todos</a>';
+
+    elementParent.appendChild(allOption);
+
+    _(data[0]).each(function(elem, key){
+        var newOption = document.createElement('li');
+        newOption.innerHTML = '<a href="' + key + '">' + elem.label + '</a>'
+        elementParent.appendChild(newOption)
+    });
+
+}
